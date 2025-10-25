@@ -1,72 +1,134 @@
-# Fundraiser Platform (MERN + Vite + Tailwind)
+# 🌍 Fundraiser Platform — MERN Stack Crowdfunding App
 
-Fundraiser Platform using MERN with:
-- Vite + React 18 frontend
-- Tailwind CSS styling with a sleek, card-based UI
-- Express + Mongoose backend with a proper model and routes
-- CORS, basic validation, and 2-click setup scripts
+A full-stack fundraising platform built with **MongoDB, Express, React, and Node.js**, designed to help small campaigns and social initiatives collect and track donations transparently.  
+Developed as a practical project to showcase **scalable architecture, clean UI design, and API integration best practices.**
 
-## Quickstart
+---
 
-### 0) Prereqs
-- Node 18+ (preferably Node 20 LTS)
-- MongoDB running locally or a MongoDB Atlas URI
+## 🚀 Overview
 
+This project demonstrates the core principles of a modern web application:
+- End-to-end data flow between frontend and backend  
+- RESTful API integration with MongoDB  
+- Environment-based configuration for local and cloud deployments  
+- UI/UX built with TailwindCSS and React hooks  
 
-### 1) Configure environment
-Copy `.env.example` to `server/.env` and set values:
-```
-MONGODB_URI=mongodb://localhost:27017/fundraiser
-PORT=5000
-```
-If using Atlas, paste your full connection string in `MONGODB_URI`.
+---
 
-### 3) Install and run (one shot)
-On macOS/Linux:
-```
-./setup.sh
-```
-On Windows PowerShell:
-```
-./setup.ps1
-```
+## ✨ Key Features
 
-Those will:
-- install dependencies in both `client` and `server`
-- start the backend on port 5000
-- start the frontend on port 5173 with a proxy to the backend
+- 💰 Real-time donation tracking and aggregation  
+- 🧾 Form validation and backend schema enforcement  
+- ⚡ Optimized frontend via **Vite** and **React 18**  
+- 🌐 Cross-origin compatibility using CORS  
+- 🎨 Modular and mobile-responsive design with TailwindCSS  
+- 🧩 Extensible backend routes for campaign, user, and analytics modules  
 
-### 4) Open the app
-Visit http://localhost:5173
+---
 
-## Project structure
+## 🧱 Architecture
+
+| Layer | Tech Stack |
+|-------|-------------|
+| Frontend | React + Vite + TailwindCSS |
+| Backend | Node.js + Express.js |
+| Database | MongoDB (Atlas / Local) |
+| Package Manager | npm |
+| Environment Config | dotenv |
+
+The codebase follows a **separation of concerns** approach:
 ```
 fundraiser-mern/
-  client/               # Vite + React + Tailwind UI
-  server/               # Express + Mongoose API
-  setup.sh              # one-shot install & run for Linux/macOS
-  setup.ps1             # one-shot install & run for Windows
-  .gitignore
-  README.md
+├── client/          # React + Vite frontend
+│   ├── src/components/   # Reusable functional components
+│   ├── App.jsx           # Root React component
+│   └── main.jsx          # Entry point
+│
+├── server/          # Express backend
+│   ├── models/      # MongoDB schemas
+│   ├── routes/      # REST API endpoints
+│   └── server.js    # Entry point
+│
+└── setup scripts, README, .env.example
 ```
 
-## GitHub push (after you've tested locally)
+---
 
-From the project root (where this README lives):
-```
-git init
-git add .
-git commit -m "feat: fundraiser mern app - ui refresh"
-git branch -M main
-# create a repo at your account first, then set the remote like:
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
+## ⚙️ Setup Guide
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/Srihari1176/fundraiser-mern.git
+cd fundraiser-mern
 ```
 
-## API
-- `POST /api/donations` body: `{ "amount": number, "description": string, "name"?: string }`
-- `GET  /api/donations`
+### 2. Configure environment variables
+Inside the `server` folder, create a `.env` file:
+```
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+```
 
-## Notes
-- For production, set proper CORS origins and consider rate limiting, authentication, and a payment gateway.
-- The UI uses environment variable `VITE_API_URL` if set. Otherwise it uses `/api` which is proxied to `localhost:5000` during dev.
+### 3. Install dependencies
+```bash
+cd server && npm install
+cd ../client && npm install
+```
+
+### 4. Run locally
+Use two terminals:
+```bash
+# Backend
+cd server
+npm run dev
+
+# Frontend
+cd client
+npm run dev
+```
+
+App runs on [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧠 API Reference
+
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| `GET` | `/api/donations` | Fetch all donations |
+| `POST` | `/api/donations` | Create a new donation |
+
+Sample payload:
+```json
+{
+  "name": "John Doe",
+  "amount": 500,
+  "description": "Education support fund"
+}
+```
+
+---
+
+## 🌱 Roadmap
+
+- Integrate Razorpay / Stripe payment gateways  
+- Add JWT authentication and user roles  
+- Campaign-specific dashboards and leaderboards  
+- Deployment with CI/CD pipelines on Render or Vercel  
+
+---
+
+## 🧑‍💻 Author
+
+**Srihari**  
+📍 Chennai, India  
+🎓 B.Tech AI & Data Science — Shiv Nadar University Chennai  
+🌐 [github.com/Srihari1176](https://github.com/Srihari1176)
+
+> _“Built to explore how data, design, and impact intersect in modern full-stack apps.”_
+
+---
+
+## 🪪 License
+
+This project is open-source under the [MIT License](LICENSE).

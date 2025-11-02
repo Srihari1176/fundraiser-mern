@@ -1,7 +1,7 @@
-# 🌍 Fundraiser Platform — MERN Stack Crowdfunding App
+# 🌍 Fundraiser Platform 
 
-A fully deployed, cloud-hosted **MERN stack** application that allows users to create, view, and donate to fundraising campaigns.  
-The project demonstrates complete end-to-end integration of **MongoDB Atlas**, **Express/Node.js**, **React + Vite**, and cloud deployment pipelines via **Render** and **Vercel**.
+A fully deployed, cloud-hosted  application that allows users to create, view, and donate to fundraising campaigns.  
+The project demonstrates complete end-to-end integration of **MySQL**, **Express/Node.js**, **React + Vite**, and cloud deployment pipelines via **Render** and **Vercel**.
 
 ---
 
@@ -15,7 +15,7 @@ The project demonstrates complete end-to-end integration of **MongoDB Atlas**, *
 ## 🧱 Architecture Overview
 
 ```
-Frontend (Vercel)  →  Backend (Render)  →  MongoDB Atlas
+Frontend (Vercel)  →  Backend (Render)  →  MySQL
      React + Vite         Express API         Cloud Database
 ```
 
@@ -29,7 +29,7 @@ Frontend (Vercel)  →  Backend (Render)  →  MongoDB Atlas
 
 - 🧾 Create and manage fundraising campaigns  
 - 💰 Submit and track donations in real-time  
-- 📊 MongoDB-backed persistent storage  
+- 📊 MySQL gives Structure
 - 🎨 Responsive UI built with **TailwindCSS**  
 - 🔐 Secure API architecture with CORS enabled  
 - ⚙️ CI/CD ready — automatic deployment from GitHub on every push
@@ -42,7 +42,7 @@ Frontend (Vercel)  →  Backend (Render)  →  MongoDB Atlas
 |-------|-------------|
 | Frontend | React + Vite + TailwindCSS |
 | Backend | Node.js + Express.js |
-| Database | MongoDB Atlas |
+| Database | MySQL |
 | Deployment | Vercel (Frontend) & Render (Backend) |
 | Version Control | GitHub |
 

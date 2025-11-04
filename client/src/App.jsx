@@ -62,7 +62,7 @@ export default function App() {
       </div>
 
       <footer className="mt-8 text-center text-slate-500 text-sm">
-        Built with React, Tailwind, Express, Mongoose.
+        Built with React, Tailwind, Express.
       </footer>
     </div>
   )

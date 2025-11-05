@@ -90,13 +90,12 @@ Frontend (Vercel)  →  Backend (Render)  →  MySQL
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 
 **Srihari**  
-🎓 B.Tech AI & Data Science — Shiv Nadar University Chennai  
-🌐 [https://github.com/Srihari1176](https://github.com/Srihari1176)
+ B.Tech AI & Data Science — Shiv Nadar University Chennai  
+[https://github.com/Srihari1176](https://github.com/Srihari1176)
 
-> “Built to learn, scaled to inspire — a complete MERN project from code to cloud.”
 
 ---
 
